@@ -1,5 +1,16 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F3F6F4">
+<meta name="description" content="Mohammed Abushaar: E-commerce Specialist (Performance Marketing &amp; Conversion Tracking). Case studies, live stores and campaign results. محمد صدام ابوشعر: أخصائي تجارة إلكترونية.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mohammed Abushaar | E-commerce Specialist">
+<meta property="og:description" content="Campaign results, live stores and conversion tracking work. Arabic and English.">
+<meta property="og:image" content="https://itsmoshaar-dot.github.io/2026-Portofolio/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <title>Mohammed Abushaar</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -41,7 +52,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-padding-top: 5rem; }
+html { scroll-padding-top: 5rem; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   background: var(--bg); color: var(--ink);
   font-family: var(--body); font-size: 1rem; line-height: 1.65;
@@ -53,6 +64,10 @@ body {
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 html[lang="ar"] body { line-height: 1.9; }
 html[lang="ar"] * { letter-spacing: 0 !important; }
+html[lang="ar"] .eyebrow, html[lang="ar"] .store .role, html[lang="ar"] .card .role, html[lang="ar"] .facts dt, html[lang="ar"] .mt th,
+html[lang="ar"] .stackshots .mo2, html[lang="ar"] .tl .when, html[lang="ar"] .reach .k, html[lang="ar"] .bar .mo, html[lang="ar"] .badge,
+html[lang="ar"] .frame .url, html[lang="ar"] .lift.txt { font-family: var(--body); text-transform: none; }
+html[lang="ar"] .eyebrow, html[lang="ar"] .store .role, html[lang="ar"] .facts dt, html[lang="ar"] .reach .k { font-size: .85rem; }
 h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; line-height: 1.15; }
 html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 { line-height: 1.4; }
 p { margin: 0; }
@@ -76,7 +91,26 @@ button { font: inherit; color: inherit; }
 .nav button { background: none; border: 0; padding: .45rem .7rem; border-radius: 6px; color: var(--muted); cursor: pointer; font-size: .92rem; }
 .nav button:hover { color: var(--ink); background: var(--surface-2); }
 .nav .lang { border: 1px solid var(--line); color: var(--ink); font-weight: 500; margin-inline-start: .4rem; background: var(--surface); }
-@media (max-width: 640px) { .nav .nav-link { display: none; } }
+.subnav { display: none; }
+@media (max-width: 560px) { .mt th:nth-child(5), .mt td:nth-child(5) { display: none; } .mt th, .mt td { padding: .7rem .5rem; } }
+@media (max-width: 640px) {
+  html { scroll-padding-top: 7.5rem; }
+  .nav .nav-link { display: none; }
+  .subnav { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .6rem; max-width: 1120px; margin-inline: auto; scrollbar-width: none; }
+  .subnav::-webkit-scrollbar { display: none; }
+  .subnav button { flex: none; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: .5rem .95rem; min-height: 40px; font-size: .92rem; color: var(--ink); cursor: pointer; }
+  .nav .lang { min-height: 40px; padding-inline: .9rem; }
+  .btn, .btn.sm { min-height: 44px; justify-content: center; }
+  .cta-row .btn { flex: 1 1 100%; }
+  .reach button { min-height: 40px; padding-inline: 1rem; }
+  .frame .scroll { height: 340px; }
+  .case { border-radius: 12px; }
+  .contact { border-radius: 12px; }
+  .hint, .cap, .mt-note { font-size: .9rem; }
+  .kv dd { font-size: 1.05rem; }
+  .lb { padding: .75rem; justify-content: flex-start; align-items: flex-start; }
+  .lb:not(.tall) img { max-width: none; width: 920px; max-height: none; }
+}
 
 /* Hero */
 .hero { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; }
@@ -177,13 +211,15 @@ html[lang="ar"] .sub h4 { line-height: 1.5; }
 .blk-h em { font-style: normal; font-family: var(--body); font-weight: 400; font-size: .88rem; color: var(--muted); }
 .shot { display: block; width: 100%; padding: 0; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; cursor: zoom-in; }
 .shot img { display: block; width: 100%; height: auto; }
+.shot { position: relative; }
+.shot::after { content: "\2922"; position: absolute; inset-block-end: .5rem; inset-inline-end: .5rem; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 7px; background: rgba(8, 20, 16, .72); color: #fff; font-size: 16px; line-height: 1; pointer-events: none; }
 .cap { font-size: .85rem; color: var(--muted); margin-top: .7rem; max-width: 68ch; }
 .kv { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
 .kv div { padding: .9rem 1rem; border-bottom: 1px solid var(--line); min-width: 0; }
 .kv div:nth-child(odd) { border-inline-end: 1px solid var(--line); }
 .kv div:nth-last-child(-n+2) { border-bottom: 0; }
 .kv dt { font-size: .78rem; color: var(--muted); line-height: 1.35; }
-.kv dd { margin: .2rem 0 0; font-family: var(--display); font-weight: 600; font-size: 1.25rem; font-variant-numeric: tabular-nums; direction: ltr; text-align: start; unicode-bidi: plaintext; }
+.kv dd { white-space: nowrap; margin: .2rem 0 0; font-family: var(--display); font-weight: 600; font-size: 1.25rem; font-variant-numeric: tabular-nums; direction: ltr; text-align: start; unicode-bidi: plaintext; }
 html[lang="ar"] .kv dd { text-align: right; }
 .kv .em dd { color: var(--accent); }
 .kv .odd-last { grid-column: 1 / -1; border-inline-end: 0 !important; border-bottom: 0; }
@@ -233,7 +269,8 @@ html[lang="ar"] .kv dd { text-align: right; }
 .tl h3 { font-size: 1.15rem; font-weight: 600; margin-top: .2rem; }
 .tl .org { color: var(--muted); font-size: .95rem; }
 .tl p { margin-top: .5rem; color: var(--muted); max-width: 64ch; font-size: .96rem; }
-.certs { margin-top: 2.25rem; display: grid; gap: .4rem; font-size: .95rem; color: var(--muted); }
+.certs { margin-top: 2.5rem; display: grid; gap: .75rem; font-size: .95rem; color: var(--muted); max-width: 74ch; }
+.certs h3 { font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-top: .75rem; }
 .certs strong { color: var(--ink); font-weight: 600; }
 
 /* Contact */
@@ -253,7 +290,7 @@ html[lang="ar"] .reach .v { text-align: right; }
 /* Lightbox */
 .lb { position: fixed; inset: 0; z-index: 30; background: rgba(5, 12, 10, .86); display: flex; align-items: center; justify-content: center; padding: 1.25rem; overflow: auto; }
 .lb[hidden] { display: none !important; }
-.lb img { max-width: min(100%, 1500px); max-height: 92vh; height: auto; border-radius: 8px; background: #fff; }
+.lb img { max-width: min(100%, 1500px); max-height: 92vh; height: auto; border-radius: 8px; background: #fff; margin: auto; flex: none; }
 .lb button { position: fixed; top: calc(.9rem + env(safe-area-inset-top, 0px)); inset-inline-end: 1rem; background: #fff; color: #111; border: 0; border-radius: 8px; padding: .5rem .9rem; font-weight: 600; cursor: pointer; }
 @media (prefers-reduced-motion: no-preference) { .fill { transition: width .5s ease; } .plat { transition: border-color .15s, background .15s; } }
 </style>
@@ -270,6 +307,13 @@ html[lang="ar"] .reach .v { text-align: right; }
       <button class="lang" id="langBtn" type="button" aria-label="Switch language">العربية</button>
     </nav>
   </div>
+  <nav class="subnav" aria-label="Sections">
+    <button type="button" data-scroll="work" data-i18n="nav_work">Work</button>
+    <button type="button" data-scroll="stores" data-i18n="nav_stores">Stores</button>
+    <button type="button" data-scroll="skills" data-i18n="nav_skills">Skills</button>
+    <button type="button" data-scroll="experience" data-i18n="nav_exp">Experience</button>
+    <button type="button" data-scroll="contact" data-i18n="nav_contact">Contact</button>
+  </nav>
 </header>
 
 <main class="wrap">
@@ -408,8 +452,8 @@ html[lang="ar"] .reach .v { text-align: right; }
       <p class="cap" data-i18n="cr_p">Seven static designs ran on Meta and Snapchat, each built around one angle. I wrote the creative plan and the angle for each design.</p>
       <div class="crs">
         <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr1.jpg" alt="دعوة إلكترونية فخمة لمناسبتك بـ 0.99 ريال فقط" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr1l">Price hook</b><span data-i18n="cr1d">A luxury invitation for SAR 0.99</span></figcaption></figure>
-        <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr2.jpg" alt="استقبال منظم ودخول سريع لضيوفك بباركود ذكي" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr2l">Smart check-in</b><span data-i18n="cr2d">Guests scanned in at the door in one second</span></figcaption></figure>
-        <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr3.jpg" alt="أنشئ دعوتك خلال دقائق.. بنفسك وبدون تعقيد" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr3l">Speed and ease</b><span data-i18n="cr3d">Create your invitation in minutes, yourself</span></figcaption></figure>
+        <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr2.jpg" alt="استقبال منظم ودخول سريع لضيوفك بباركود ذكي" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr2l">Smart check-in</b><span data-i18n="cr2d">Guests check in at the door with a one-second scan</span></figcaption></figure>
+        <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr3.jpg" alt="أنشئ دعوتك خلال دقائق.. بنفسك وبدون تعقيد" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr3l">Speed and ease</b><span data-i18n="cr3d">Create your own invitation in minutes</span></figcaption></figure>
         <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr4.jpg" alt="إدارة دعوتك أسهل مما تتوقع بخطوات بسيطة" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr4l">Three simple steps</b><span data-i18n="cr4d">Pick a design, add the details, send on WhatsApp</span></figcaption></figure>
         <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr5.jpg" alt="اعرف مين بيحضر مناسبتك بدقة وتابع التأكيدات لحظة بلحظة" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr5l">Live RSVP tracking</b><span data-i18n="cr5d">See who is coming and follow confirmations live</span></figcaption></figure>
         <figure class="cr"><button class="shot" type="button" data-zoom><img src="img/cr6.jpg" alt="ليش تدفع الآلاف على الطباعة والورق؟" width="900" height="1125" loading="lazy"></button><figcaption><b data-i18n="cr6l">Cost saving</b><span data-i18n="cr6d">Why pay thousands for printing and paper?</span></figcaption></figure>
@@ -514,9 +558,9 @@ html[lang="ar"] .reach .v { text-align: right; }
           <div class="scroll" tabindex="0" role="region" aria-label="Marsa homepage, scrollable"><img id="ls-marsa" src="img/ls-marsa.jpg" alt="Marsa homepage" width="760" height="6008" loading="lazy"></div></div>
         <div class="actions"><a class="btn sm primary" href="https://itsmarsa.com/" target="_blank" rel="noopener" data-i18n="ls_visit">Visit live store</a><button class="btn sm" type="button" data-zoom-img="ls-marsa" data-i18n="ls_enl">Enlarge</button></div>
         <ul class="ls">
-          <li data-i18n="m1">Own end-to-end operations: product uploads and imagery, category structure and product page optimization.</li>
-          <li data-i18n="m2">Plan and implement seasonal homepage and theme updates, briefing the design team and customizing the theme with CSS and JavaScript.</li>
-          <li data-i18n="m3">Run the weekly social media content plan, and call dozens of wholesale shop owners and abandoned-cart customers. Some asked for the payment link during the call.</li>
+          <li data-i18n="m1">Manage the store end to end: product uploads and imagery, category structure and product page optimization.</li>
+          <li data-i18n="m2">Plan and implement seasonal homepage and theme updates, brief the design team and customize the theme with CSS and JavaScript.</li>
+          <li data-i18n="m3">Manage the weekly social media content plan and phone dozens of wholesale shop owners and abandoned-cart customers. Some asked for the payment link during the call itself.</li>
         </ul>
       </article>
       <article class="store">
@@ -587,8 +631,15 @@ html[lang="ar"] .reach .v { text-align: right; }
       </li>
     </ol>
     <div class="certs">
-      <p><strong data-i18n="ce_h">Certifications</strong> · <span data-i18n="ce_p">Google Analytics (GA4) certification, Google; One Million Prompters, Dubai Future Foundation (Jul 2026); Diploma in Graphic Design (Adobe Photoshop and Illustrator); Higher Diploma in English, New Horizons Institute</span></p>
-      <p><strong data-i18n="ln_h">Languages</strong> · <span data-i18n="ln_p">Arabic (native), English (professional working proficiency)</span></p>
+      <h3 data-i18n="ce_h">Certifications</h3>
+      <ul class="ls">
+        <li data-i18n="ce1">Google Analytics (GA4) certification, Google</li>
+        <li data-i18n="ce2">One Million Prompters, Dubai Future Foundation (Jul 2026)</li>
+        <li data-i18n="ce3">Diploma in Graphic Design (Adobe Photoshop and Illustrator)</li>
+        <li data-i18n="ce4">Higher Diploma in English, New Horizons Institute</li>
+      </ul>
+      <h3 data-i18n="ln_h">Languages</h3>
+      <ul class="ls"><li data-i18n="ln_p">Arabic (native), English (professional working proficiency)</li></ul>
     </div>
   </section>
 
@@ -615,109 +666,113 @@ html[lang="ar"] .reach .v { text-align: right; }
 (function () {
   var AR = {
     brand: "محمد صدام ابوشعر", foot: "© 2026 محمد صدام ابوشعر",
-    nav_work: "الأعمال", nav_stores: "المتاجر", nav_skills: "المهارات", nav_exp: "الخبرة", nav_contact: "تواصل",
-    eyebrow: "أخصائي تجارة إلكترونية · التسويق بالأداء وتتبع التحويلات",
-    h1: "أنمّي المتاجر الإلكترونية: الكتالوج، والإعلانات، والتتبع الذي يثبت ما نجح.",
-    lede: "عام ونصف من إدارة متاجر سلة وWooCommerce لعملاء وكالة، مع حملات مدفوعة على Google Ads وMeta وSnapchat. أستخدم GA4 وMicrosoft Clarity وSearch Console لاكتشاف أين يتعثر المتسوّقون ثم أعالج المشكلة.",
-    where: "السعودية · متاح للعمل عن بُعد أو من مقر العمل",
-    cta1: "شاهد دراسة حالة تراحيب", cta2: "تواصل معي",
-    s1n: "‎51–113%‎", s1l: "نسبة رفع ROAS على Meta وSnapchat بعد تضييق الميزانيات وتوسيعها",
-    s2n: "+9 آلاف ر.س", s2l: "إنفاق إعلاني تمت إدارته على Google وMeta وSnapchat",
-    s3n: "317", s3l: "عملية شراء تم تتبعها على Google وMeta وSnapchat",
-    s4n: "3", s4l: "منصات إعلانية أدرتها لتراحيب: Google Ads وMeta وSnapchat",
-    work_eb: "أبرز الأعمال", work_h: "نتائج الحملات، مع لوحاتها",
-    c_kick: "دراسة حالة · ATMET · أغسطس–أكتوبر 2026",
-    c_h: "تراحيب: تسويق خدمة دعوات إلكترونية عبر واتساب على ثلاث منصات إعلانية",
-    c_intro: "تراحيب خدمة دعوات إلكترونية عبر واتساب للمناسبات. في ATMET خططتُ لحملاتها المدفوعة في السعودية وأطلقتها وحسّنتها على Google Ads وMeta وSnapchat، وكان الهدف المبيعات.",
+    nav_work: "الأعمال", nav_stores: "المتاجر", nav_skills: "المهارات", nav_exp: "الخبرة", nav_contact: "التواصل",
+    eyebrow: "أخصائي تجارة إلكترونية | تسويق بالأداء وتتبع التحويلات",
+    h1: "أُنمّي المتاجر الإلكترونية بإدارة الكتالوج وتشغيل الإعلانات وتتبّعٍ دقيق يُثبت ما نجح.",
+    lede: "أملك خبرة سنة ونصف في إدارة متاجر سلة وWooCommerce لصالح عملاء وكالة، إضافةً إلى إدارة حملات إعلانية على Google Ads وMeta وSnapchat. أعتمد على GA4 وMicrosoft Clarity وSearch Console لرصد مواضع تعثّر المتسوّقين ومعالجتها.",
+    where: "المملكة العربية السعودية | متاح للعمل عن بُعد أو حضوريًا",
+    cta1: "استعرض دراسة حالة تراحيب", cta2: "تواصل معي",
+    s1n: "‎51–113%‎", s1l: "نسبة تحسّن العائد على الإنفاق الإعلاني (ROAS) في Meta وSnapchat بعد تضييق الميزانيات وتوسيعها",
+    s2n: "+9 آلاف ر.س", s2l: "إنفاق إعلاني أُدير عبر Google وMeta وSnapchat",
+    s3n: "317", s3l: "عملية شراء جرى تتبّعها على Google وMeta وSnapchat",
+    s4n: "3", s4l: "منصات إعلانية أدرتُها لصالح تراحيب: Google Ads وMeta وSnapchat",
+    work_eb: "أبرز الأعمال", work_h: "نتائج الحملات مدعومة بلوحات المنصات",
+    c_kick: "دراسة حالة | ATMET | أغسطس – أكتوبر 2026",
+    c_h: "تراحيب: الترويج لخدمة دعوات إلكترونية عبر واتساب على ثلاث منصات إعلانية",
+    c_intro: "تراحيب خدمة دعوات إلكترونية للمناسبات تُرسَل عبر واتساب. خلال عملي في ATMET خططتُ لحملاتها الإعلانية في السعودية على Google Ads وMeta وSnapchat، ثم أطلقتُها وحسّنتُ أداءها، وكان هدفها تحقيق المبيعات.",
     f1k: "الدور", f1v: "متدرب تسويق رقمي",
     f2k: "الفترة", f2v: "10 أغسطس – 13 أكتوبر 2026",
-    f3k: "السوق", f3v: "السعودية، بالعربية",
-    f4k: "المُدار", f4v: "+9 آلاف ر.س على Google وMeta وSnapchat",
-    ov_h: "ROAS قبل تضييق الميزانيات وتوسيعها وبعده", ov_hint: "اختر منصة للانتقال إلى لوحتها.",
-    ov_note: "تقارن الأعمدة ROAS قبل تضييق الميزانيات وتوسيعها وبعده. أما لقطات اللوحات أدناه فتعرض النتائج الإجمالية للفترة كاملة، من 10 أغسطس إلى 13 أكتوبر 2026. أما في Google Ads فيعرض العمود آخر ROAS فقط.",
-    ov_period: "النتائج الإجمالية · 10 أغسطس – 13 أكتوبر 2026",
+    f3k: "السوق", f3v: "السعودية، باللغة العربية",
+    f4k: "الإنفاق المُدار", f4v: "أكثر من 9 آلاف ر.س على Google وMeta وSnapchat",
+    ov_h: "العائد على الإنفاق الإعلاني (ROAS) قبل تضييق الميزانيات وتوسيعها وبعده", ov_hint: "اختر منصة للانتقال إلى لوحتها.",
+    ov_note: "تقارن الأعمدة بين العائد قبل تضييق الميزانيات وتوسيعها وبعده. أما لقطات اللوحات أدناه فتعرض النتائج الإجمالية للفترة كاملة، من 10 أغسطس إلى 13 أكتوبر 2026. وفي Google Ads يُعرض آخر عائد مسجَّل فقط.",
+    ov_period: "النتائج الإجمالية | 10 أغسطس – 13 أكتوبر 2026",
     lift_latest: "الأحدث", lg_b: "قبل", lg_a: "بعد",
-    k_spent: "المبلغ المُنفق", k_value: "قيمة المشتريات", k_roas: "ROAS الإجمالي", k_purch: "المشتريات",
-    k_cpp: "تكلفة الشراء", k_ctr: "نسبة النقر CTR", k_clicks: "نقرات الروابط", k_imp: "مرات الظهور",
+    k_spent: "الإنفاق", k_value: "قيمة المشتريات", k_roas: "العائد الإجمالي (ROAS)", k_purch: "عمليات الشراء",
+    k_cpp: "تكلفة الشراء", k_ctr: "نسبة النقر (CTR)", k_clicks: "النقرات على الروابط", k_imp: "مرات الظهور",
     k_cost: "التكلفة", k_convv: "قيمة التحويل", k_ratio: "قيمة التحويل ÷ التكلفة", k_daily: "الميزانية اليومية",
     meta_spent: "3,832.41 ر.س", meta_value: "7,305.92 ر.س", meta_cpp: "56.36 ر.س",
     snap_spent: "2,154.85 ر.س", snap_value: "5,706.19 ر.س",
     google_cost: "3,355.83 ر.س", google_cps: "21.79 ر.س", k_pval: "قيمة المشتريات", k_cps: "تكلفة الشراء", google_daily: "80 ر.س",
-    meta_cap: "مدير إعلانات Meta، النتائج الإجمالية من 10 أغسطس إلى 13 أكتوبر 2026 (3 حملات لتراحيب). هذه الفترة كاملة، لذلك يقع ROAS فيها بين رقمي قبل وبعد.",
-    snap_cap: "مدير إعلانات Snapchat، النتائج الإجمالية من 10 أغسطس إلى 13 أكتوبر 2026: 95 عملية شراء وROAS للمشتريات 2.65. هذه الفترة كاملة، لذلك يقع الرقم بين رقمي قبل وبعد.",
-    google_cap: "حملة بحث على Google Ads، السعودية، بالعربية، النتائج الإجمالية من 10 أغسطس إلى 13 أكتوبر 2026. وفق تقرير الحملة المعتمد (جُهّز في 13 أكتوبر): 154 عملية شراء بقيمة 9,185.74 ر.س مقابل إنفاق 3,355.83 ر.س، أي ROAS للمشتريات 2.74x للفترة كاملة، وآخر ROAS كان 3.24x. أُخذت اللقطة بعد التقرير لذلك تظهر فيها أرقام أعلى قليلًا.",
-    google_note: "ملاحظة: في بداية إطلاق الحملة كان Google Ads يسجّل التسجيلات (sign up) وعمليات الشراء معًا كمبيعات. اكتشفتُ الخطأ وصحّحتُه، لذلك يظهر في اللقطة عدد تحويلات أعلى (218) من المبيعات المعتمدة (154). والأرقام بجانبها تعتمد على المشتريات فقط.",
+    meta_cap: "مدير إعلانات Meta: النتائج الإجمالية للفترة من 10 أغسطس إلى 13 أكتوبر 2026 (ثلاث حملات لتراحيب). وبما أنها تشمل الفترة كاملة، يقع العائد فيها بين رقمَي «قبل» و«بعد».",
+    snap_cap: "مدير إعلانات Snapchat: النتائج الإجمالية للفترة من 10 أغسطس إلى 13 أكتوبر 2026، وفيها 95 عملية شراء وعائد على الإنفاق بلغ 2.65. وبما أنها تشمل الفترة كاملة، يقع العائد بين رقمَي «قبل» و«بعد».",
+    google_cap: "حملة بحث على Google Ads موجّهة إلى السعودية باللغة العربية، والنتائج إجمالية للفترة من 10 أغسطس إلى 13 أكتوبر 2026. وبحسب تقرير الحملة المعتمد (المُعَدّ في 13 أكتوبر): 154 عملية شراء بقيمة 9,185.74 ر.س مقابل إنفاق قدره 3,355.83 ر.س، أي عائد 2.74x للفترة كاملة، بينما بلغ آخر عائد مسجَّل 3.24x. التُقطت اللقطة بعد إعداد التقرير، لذا تظهر فيها أرقام أعلى قليلًا.",
+    google_note: "ملاحظة: في بداية الحملة كان Google Ads يحتسب التسجيلات وعمليات الشراء معًا كمبيعات. وقد رصدتُ الخطأ وصحّحتُه، ولهذا يظهر في اللقطة عدد تحويلات أعلى (218) من عدد المبيعات المعتمد (154). وتعتمد الأرقام المعروضة بجانبها على عمليات الشراء فقط.",
     meta_alt: "جدول مدير إعلانات Meta لحملات تراحيب من 10 أغسطس إلى 13 أكتوبر 2026",
-    snap_alt: "نظرة عامة على مدير إعلانات Snapchat لتراحيب مع مخطط المشتريات اليومية",
+    snap_alt: "نظرة عامة على مدير إعلانات Snapchat لحملة تراحيب مع مخطط عمليات الشراء اليومية",
     google_alt: "عرض حملة Google Ads لتراحيب يوضح مرات الظهور والتكلفة وقيمة التحويل ونسبة النقر",
-    did_h: "ما الذي قمت به",
-    d1h: "الاستراتيجية والإبداع", d1p: "بنيتُ استراتيجية الجمهور وبحث الكلمات المفتاحية ونصوص الإعلانات، وكتبتُ خطة الإبداع مع زوايا التصميم لـ 9 تصاميم إعلانية.",
-    d2h: "التحسين", d2p: "أوقفتُ الإعلانات الضعيفة ووسّعتُ الرابحة وضيّقتُ الميزانيات نحو المنصات الأعلى عائدًا.",
-    d3h: "تدقيق التتبع", d3p: "دقّقتُ تتبع التحويلات في Google Tag Manager وبكسلات Google Ads وMeta وSnapchat. اكتشفتُ أن Google Ads يحتسب التسجيلات كمشتريات، وصحّحتُ ذلك، وحدّدتُ أحداث Data Layer مع المطوّر.",
-    d4h: "التقارير", d4p: "كتبتُ تقرير أداء الحملة مع التحليل والتوصيات للإدارة.",
-    cr_h: "التصاميم الإعلانية", cr_hint: "اضغط على التصميم لتكبيره. اسحب لمشاهدة المزيد.",
-    cr_p: "عُرضت سبعة تصاميم ثابتة على Meta وSnapchat، وبُني كل تصميم على زاوية واحدة. كتبتُ خطة الإبداع والزاوية لكل تصميم.",
-    cr1l: "عرض السعر", cr1d: "دعوة فخمة بـ 0.99 ريال",
-    cr2l: "الدخول الذكي", cr2d: "مسح الضيوف عند الباب في ثانية واحدة",
-    cr3l: "السرعة والسهولة", cr3d: "أنشئ دعوتك خلال دقائق وبنفسك",
-    cr4l: "ثلاث خطوات بسيطة", cr4d: "اختر التصميم وأضف التفاصيل وأرسل عبر واتساب",
+    did_h: "ما نفّذته",
+    d1h: "الاستراتيجية والمحتوى الإبداعي", d1p: "أعددتُ استراتيجية الجمهور المستهدف، وأجريتُ بحث الكلمات المفتاحية، وكتبتُ نصوص الإعلانات، ووضعتُ خطة المحتوى الإبداعي مع زوايا التصميم لتسعة تصاميم إعلانية.",
+    d2h: "التحسين", d2p: "أوقفتُ الإعلانات ضعيفة الأداء، وزِدتُ الإنفاق على الإعلانات الرابحة، وضيّقتُ الميزانيات لتتركّز في المنصات الأعلى عائدًا.",
+    d3h: "تدقيق التتبع", d3p: "راجعتُ إعدادات تتبع التحويلات في Google Tag Manager وبكسلات Google Ads وMeta وSnapchat. واكتشفتُ أن Google Ads كان يحتسب التسجيلات كعمليات شراء، فصحّحتُ ذلك، وحدّدتُ مع المطوّر أحداث طبقة البيانات (Data Layer).",
+    d4h: "التقارير", d4p: "أعددتُ تقرير أداء الحملة متضمنًا التحليل والتوصيات المرفوعة إلى الإدارة.",
+    cr_h: "التصاميم الإعلانية", cr_hint: "اضغط على التصميم لتكبيره، واسحب لعرض المزيد.",
+    cr_p: "عُرضت سبعة تصاميم ثابتة على Meta وSnapchat، وارتكز كل تصميم على زاوية تسويقية واحدة. وقد كتبتُ خطة المحتوى الإبداعي والزاوية الخاصة بكل تصميم.",
+    cr1l: "عرض السعر", cr1d: "دعوة إلكترونية فاخرة بـ 0.99 ريال",
+    cr2l: "الدخول الذكي", cr2d: "تسجيل دخول الضيوف عند الباب بمسح الباركود في ثانية",
+    cr3l: "السرعة والسهولة", cr3d: "أنشئ دعوتك بنفسك خلال دقائق",
+    cr4l: "ثلاث خطوات بسيطة", cr4d: "اختر التصميم، وأضف التفاصيل، وأرسل عبر واتساب",
     cr5l: "متابعة الحضور", cr5d: "اعرف من سيحضر وتابع التأكيدات لحظة بلحظة",
-    cr6l: "توفير التكلفة", cr6d: "ليش تدفع الآلاف على الطباعة والورق؟",
-    cr7l: "تنوع التصاميم", cr7d: "تصاميم فاخرة تناسب كل أنواع المناسبات",
-    st_eb: "Imdad X · نوفمبر 2025 – الآن", st_h: "أعمال المتاجر لعملاء الوكالة",
-    st_sub: "مرّر داخل كل إطار لمشاهدة الصفحة الرئيسية كاملة.",
-    m_h: "مرسى", m_r: "متجر عطور بالجملة والتجزئة · ووردبريس + ووكومرس",
-    fa_h: "فوق الوصف", fa_r: "متجر على سلة",
-    at_h: "Athetha", at_r: "متجر على سلة",
-    ls_visit: "زيارة المتجر", ls_enl: "تكبير", ls_closed: "المتجر لم يعد متاحًا", ls_off: "مغلق",
-    m1: "أدير العمليات من البداية إلى النهاية: رفع المنتجات والصور، وهيكلة الأقسام، وتحسين صفحات المنتجات.",
-    m2: "أخطط وأنفّذ تحديثات موسمية للصفحة الرئيسية والثيم، وأوجّه فريق التصميم، وأخصص الثيم بـ CSS وJavaScript.",
-    m3: "أدير خطة المحتوى الأسبوعية على السوشيال ميديا، وأتصل بعشرات من أصحاب محلات الجملة وأصحاب السلات المتروكة، وطلب بعضهم رابط الدفع أثناء المكالمة.",
-    f0: "أدير عمليات المتجر اليومية من البداية إلى النهاية.",
+    cr6l: "توفير التكلفة", cr6d: "لماذا تدفع الآلاف على الطباعة والورق؟",
+    cr7l: "تنوّع التصاميم", cr7d: "تصاميم فاخرة تناسب مختلف المناسبات",
+    st_eb: "Imdad X | نوفمبر 2025 – الآن", st_h: "أعمال المتاجر لصالح عملاء الوكالة",
+    st_sub: "مرّر داخل كل إطار لاستعراض الصفحة الرئيسية كاملة.",
+    m_h: "مرسى", m_r: "متجر عطور بالجملة والتجزئة | WordPress وWooCommerce",
+    fa_h: "فوق الوصف", fa_r: "متجر على منصة سلة",
+    at_h: "أثيثة", at_r: "متجر على منصة سلة",
+    ls_visit: "زيارة المتجر", ls_enl: "تكبير", ls_closed: "المتجر متوقف حاليًا", ls_off: "مغلق",
+    m1: "أتولّى إدارة المتجر من البداية إلى النهاية، من رفع المنتجات وصورها إلى هيكلة الأقسام وتحسين صفحات المنتجات.",
+    m2: "أخطط للتحديثات الموسمية للصفحة الرئيسية والقالب وأنفّذها، مع توجيه فريق التصميم وتخصيص القالب بلغتي CSS وJavaScript.",
+    m3: "أدير خطة المحتوى الأسبوعية على وسائل التواصل الاجتماعي، وأتواصل هاتفيًا مع عشرات من أصحاب محلات الجملة وأصحاب السلات المتروكة، وقد طلب بعضهم رابط الدفع أثناء المكالمة نفسها.",
+    f0: "أدير العمليات اليومية للمتجر من البداية إلى النهاية.",
     f4: "أعدّل عروض المتجر وأحدّثها.",
-    f5: "أختار وأثبّت التطبيقات والأدوات التي تفيد المتجر.",
-    f1: "شاركتُ في ترحيل المتجر إلى سلة.",
-    f2: "ضبطتُ مسارات الشحن وشركات الشحن في سلة، ورفعتُ مشكلات المتجر عبر تذاكر دعم سلة.",
-    f3: "حلّلتُ GA4 وMicrosoft Clarity لتخطيط تصوّر ثيم جديد بطابع البر والكشتة.",
-    a1: "دعمتُ رفع كتالوج بعدة مئات من المنتجات.",
-    a0: "أدرتُ عمليات المتجر اليومية من البداية إلى النهاية.",
+    f5: "أختار التطبيقات والأدوات المفيدة للمتجر وأثبّتها.",
+    f1: "شاركتُ في نقل المتجر إلى منصة سلة.",
+    f2: "أعددتُ مسارات الشحن وشركات الشحن في سلة، ورفعتُ مشكلات المتجر إلى الدعم الفني عبر تذاكر سلة.",
+    f3: "حلّلتُ بيانات GA4 وMicrosoft Clarity لإعداد تصوّر ثيم جديد بطابع البر والكشتة.",
+    a0: "أدرتُ العمليات اليومية للمتجر من البداية إلى النهاية.",
+    a1: "ساهمتُ في رفع كتالوج يضم عدة مئات من المنتجات.",
     a4: "عدّلتُ عروض المتجر.",
-    a5: "اخترتُ التطبيقات والأدوات التي تفيد المتجر وثبّتُّها.",
-    a2: "ضبطتُ مسارات الشحن وشركات الشحن في سلة، وتولّيتُ الدعم الفني، ورفعتُ مشكلات المتجر عبر تذاكر دعم سلة.",
-    a3: "المتجر لم يعد متاحًا، لذلك تعرض اللقطة صفحته الرئيسية أثناء عمله.",
-    ls_all_h: "في كل متاجر العملاء",
-    ls_all_p: "أخطط لتحديثات شهرية للصفحة الرئيسية والثيم مع فريق التصميم. وأحلّل GA4 وMicrosoft Clarity وSearch Console لاكتشاف مشكلات تجربة الاستخدام، وأنفّذ الإصلاحات وأرفع النتائج في Google Sheets وWord. وأضبط الكوبونات والخصومات واسترجاع السلات المتروكة والتطبيقات الخارجية لرفع التحويل.",
-    fw_kick: "دراسة حالة · Imdad X · 2026",
+    a5: "اخترتُ التطبيقات والأدوات المفيدة للمتجر وثبّتُّها.",
+    a2: "أعددتُ مسارات الشحن وشركات الشحن في سلة، وتولّيتُ الدعم الفني، ورفعتُ مشكلات المتجر عبر تذاكر سلة.",
+    a3: "المتجر متوقف حاليًا، لذا تعرض اللقطة صفحته الرئيسية حين كان يعمل.",
+    ls_all_h: "في جميع متاجر العملاء",
+    ls_all_p: "أخطط مع فريق التصميم لتحديثات شهرية للصفحة الرئيسية والقالب، وأحلّل بيانات GA4 وMicrosoft Clarity وSearch Console لرصد مشكلات تجربة المستخدم، ثم أنفّذ الإصلاحات وأرفع النتائج في تقارير على Google Sheets وWord. كما أضبط الكوبونات والخصومات واسترجاع السلات المتروكة والتطبيقات الخارجية بهدف رفع معدل التحويل.",
+    fw_kick: "دراسة حالة | Imdad X | 2026",
     fw_h: "فوق الوصف: نتائج الحملات على Google Ads وSnapchat",
-    fw_intro: "فوق الوصف متجر على سلة أدير عمله اليومي في Imdad X. هذه لوحات حملاته المدفوعة في 2026. دعمتُ هذه الحملات ولم أكن المسؤول الرئيسي عنها.",
+    fw_intro: "فوق الوصف متجر على منصة سلة أدير عملياته اليومية في Imdad X. وفيما يلي لوحات حملاته الإعلانية خلال عام 2026. كان دوري داعمًا لهذه الحملات، ولم أكن المسؤول الرئيسي عنها.",
     fw_f1k: "المتجر", fw_f1v: "فوق الوصف (سلة)",
     fw_f2k: "المنصات", fw_f2v: "Google Ads وSnapchat Ads",
     fw_f3k: "عروض Google Ads", fw_f3v: "مايو وأغسطس وأكتوبر 2026",
     fw_f4k: "عرض Snapchat", fw_f4v: "1 – 28 فبراير 2026",
-    fw_ov: "ROAS حسب الشهر",
+    fw_ov: "العائد على الإنفاق (ROAS) حسب الشهر",
     mo_may: "مايو", mo_aug: "أغسطس", mo_oct: "أكتوبر", mo_feb: "فبراير",
     fw_peak: "الأعلى 8.66x", fw_one: "شهر واحد",
     fw_may: "مايو 2026", fw_aug: "أغسطس 2026", fw_oct: "أكتوبر 2026",
-    fw_may_alt: "نظرة عامة على Google Ads لشهر مايو 2026: 132 ألف نقرة وROAS بنسبة 655.99% ومبيعات 51 ألفًا وتكلفة 7.78 ألف ريال",
-    fw_aug_alt: "نظرة عامة على Google Ads لشهر أغسطس 2026: 106 آلاف نقرة وROAS بنسبة 865.62% ومبيعات 69.3 ألفًا وتكلفة 8.01 ألف ريال",
-    fw_oct_alt: "نظرة عامة على Google Ads لشهر أكتوبر 2026: 124 ألف نقرة وROAS بنسبة 683.88% ومبيعات 43.2 ألفًا وتكلفة 6.32 ألف ريال",
-    fw_snap_alt: "مدير إعلانات Snapchat لمتجر فوق الوصف من 1 إلى 28 فبراير 2026 مع الإنفاق ومرات الظهور يوميًا",
+    fw_may_alt: "نظرة عامة على Google Ads لشهر مايو 2026: 132 ألف نقرة، وعائد على الإنفاق بنسبة 655.99%، ومبيعات 51 ألفًا، وتكلفة 7.78 ألف ريال",
+    fw_aug_alt: "نظرة عامة على Google Ads لشهر أغسطس 2026: 106 آلاف نقرة، وعائد على الإنفاق بنسبة 865.62%، ومبيعات 69.3 ألفًا، وتكلفة 8.01 ألف ريال",
+    fw_oct_alt: "نظرة عامة على Google Ads لشهر أكتوبر 2026: 124 ألف نقرة، وعائد على الإنفاق بنسبة 683.88%، ومبيعات 43.2 ألفًا، وتكلفة 6.32 ألف ريال",
+    fw_snap_alt: "مدير إعلانات Snapchat لمتجر فوق الوصف من 1 إلى 28 فبراير 2026 مع الإنفاق ومرات الظهور اليومية",
     th_m: "الشهر", th_cost: "التكلفة (ر.س)", th_sales: "المبيعات (ر.س)", th_clicks: "النقرات",
-    fw_gcap: "نظرة عامة على حساب Google Ads لكل شهر. ROAS هو قيمة المبيعات مقسومة على التكلفة، فرقم 8.66x في أغسطس يعني 8.66 ريال مبيعات مقابل كل ريال يُنفق.",
-    fw_scap: "مدير إعلانات Snapchat، 1 – 28 فبراير 2026. بدأ العرض في 9 فبراير وبلغ ذروته حول 18 فبراير وانتهى بحلول 28 فبراير. يعرض الحساب الأرقام بالدولار الأمريكي.",
+    fw_gcap: "نظرة عامة على حساب Google Ads لكل شهر. العائد على الإنفاق (ROAS) هو قيمة المبيعات مقسومة على التكلفة؛ فالعائد 8.66x في أغسطس يعني 8.66 ريال مبيعات مقابل كل ريال أُنفق.",
+    fw_scap: "مدير إعلانات Snapchat، من 1 إلى 28 فبراير 2026. بدأ عرض الإعلانات في 9 فبراير، وبلغ ذروته نحو 18 فبراير، وانتهى بحلول 28 فبراير. ويعرض الحساب الأرقام بالدولار الأمريكي.",
     fw_s_spent: "1,237.71 دولار", fw_s_value: "3,685.16 دولار",
-    k_roas2: "ROAS للمشتريات", k_atb: "الإضافات إلى السلة",
-    sk_eb: "المهارات والأدوات", sk_h: "ما أعمل به كل أسبوع",
-    ex_eb: "الخبرة والتعليم", ex_h: "أين عملت",
-    t1w: "نوفمبر 2025 – الآن · عن بُعد، دوام كامل", t1h: "أخصائي تجارة إلكترونية", t1o: "Imdad X (وكالة رقمية)",
-    t1p: "تشغيل المتاجر وتحديثات الثيمات وإصلاحات مبنية على التحليلات والتواصل مع العملاء لمتاجر العملاء: مرسى وفوق الوصف وAthetha.",
-    t2w: "أغسطس – أكتوبر 2026 · عن بُعد", t2h: "متدرب تسويق رقمي", t2o: "ATMET (SaaS)",
-    t2p: "حملات مدفوعة وتدقيق للتتبع وتقارير لتراحيب.",
+    k_roas2: "العائد على الإنفاق (ROAS)", k_atb: "الإضافات إلى السلة",
+    sk_eb: "المهارات والأدوات", sk_h: "الأدوات التي أعمل بها أسبوعيًا",
+    ex_eb: "الخبرة والتعليم", ex_h: "مسيرتي المهنية والتعليمية",
+    t1w: "نوفمبر 2025 – الآن | عن بُعد، دوام كامل", t1h: "أخصائي تجارة إلكترونية", t1o: "Imdad X (وكالة رقمية)",
+    t1p: "إدارة تشغيل المتاجر وتحديث القوالب وتنفيذ إصلاحات مبنية على التحليلات والتواصل مع العملاء، لصالح متاجر عملاء الوكالة: مرسى وفوق الوصف وأثيثة.",
+    t2w: "أغسطس – أكتوبر 2026 | عن بُعد", t2h: "متدرب تسويق رقمي", t2o: "ATMET (SaaS)",
+    t2p: "إدارة الحملات الإعلانية وتدقيق التتبع وإعداد التقارير لخدمة تراحيب.",
     t3h: "بكالوريوس نظم المعلومات الإدارية", t3o: "جامعة الرازي",
-    ce_h: "الشهادات", ce_p: "شهادة Google Analytics (GA4) من Google؛ One Million Prompters، مؤسسة دبي للمستقبل (يوليو 2026)؛ دبلوم تصميم جرافيك (Adobe Photoshop وIllustrator)؛ دبلوم عالٍ في اللغة الإنجليزية، معهد New Horizons",
-    ln_h: "اللغات", ln_p: "العربية (لغة أم)، الإنجليزية (إجادة مهنية)",
-    co_h: "لنتحدث", co_p: "متاح للعمل عن بُعد أو من مقر العمل في وظائف التجارة الإلكترونية والتسويق بالأداء داخل السعودية.",
-    co_e: "البريد الإلكتروني", co_ph: "الجوال", copy: "نسخ", copied: "تم النسخ", close: "إغلاق"
+    ce_h: "الشهادات",
+    ce1: "شهادة Google Analytics (GA4) من Google",
+    ce2: "برنامج One Million Prompters من مؤسسة دبي للمستقبل (يوليو 2026)",
+    ce3: "دبلوم في التصميم الجرافيكي، ويشمل برنامجي Adobe Photoshop وAdobe Illustrator",
+    ce4: "دبلوم عالٍ في اللغة الإنجليزية من معهد New Horizons",
+    ln_h: "اللغات", ln_p: "العربية (اللغة الأم)، الإنجليزية (إجادة مهنية)",
+    co_h: "تواصل معي", co_p: "أتطلع إلى فرص عمل في التجارة الإلكترونية والتسويق بالأداء داخل المملكة، عن بُعد أو حضوريًا.",
+    co_e: "البريد الإلكتروني", co_ph: "رقم الجوال", copy: "نسخ", copied: "تم النسخ", close: "إغلاق"
   };
 
   var SKILLS = {
@@ -728,10 +783,10 @@ html[lang="ar"] .reach .v { text-align: right; }
       ["Tools", ["Google Sheets", "Excel", "Canva", "Adobe Photoshop", "Adobe Illustrator", "Notion", "HTML", "CSS", "JavaScript (basic)", "AI tools"]]
     ],
     ar: [
-      ["التجارة الإلكترونية", ["سلة", "WooCommerce", "WordPress", "إدارة كتالوج المنتجات", "هيكلة الأقسام", "تخطيط الصفحة الرئيسية", "تحسين صفحة المنتج", "العروض والكوبونات", "إعداد الشحن", "دعم ترحيل المتاجر"]],
+      ["التجارة الإلكترونية", ["سلة", "WooCommerce", "WordPress", "إدارة كتالوج المنتجات", "هيكلة الأقسام", "تخطيط الصفحة الرئيسية", "تحسين صفحات المنتجات", "العروض والكوبونات", "إعداد الشحن", "دعم نقل المتاجر"]],
       ["الإعلانات المدفوعة", ["Google Ads (بحث)", "Meta Ads", "TikTok Ads", "Snapchat Ads", "X Ads", "استهداف الجمهور", "بحث الكلمات المفتاحية", "كتابة نصوص الإعلانات", "توسيع الميزانيات", "تحسين ROAS"]],
       ["التحليلات والتتبع", ["Google Tag Manager", "GA4", "Meta Pixel", "TikTok Pixel", "Snapchat Pixel", "تتبع تحويلات Google Ads", "Microsoft Clarity", "Google Search Console", "Tag Assistant", "تقارير الأداء"]],
-      ["الأدوات", ["Google Sheets", "Excel", "Canva", "Adobe Photoshop", "Adobe Illustrator", "Notion", "HTML", "CSS", "JavaScript (أساسيات)", "أدوات الذكاء الاصطناعي"]]
+      ["الأدوات", ["Google Sheets", "Excel", "Canva", "Adobe Photoshop", "Adobe Illustrator", "Notion", "HTML", "CSS", "JavaScript (مستوى أساسي)", "أدوات الذكاء الاصطناعي"]]
     ]
   };
 
