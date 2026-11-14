@@ -114,8 +114,10 @@ button { font: inherit; color: inherit; }
 
 /* Hero */
 .hero { padding-block: clamp(2.5rem, 7vw, 5rem) 2.5rem; }
-.hero h1 { font-size: clamp(2rem, 5.2vw, 3.6rem); font-weight: 700; letter-spacing: -.025em; max-width: 20ch; margin-top: .9rem; }
-html[lang="ar"] .hero h1 { max-width: 24ch; }
+.hero h1 { font-size: clamp(1.75rem, 4.4vw, 3rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.15; max-width: 26ch; margin-top: .9rem; }
+.eyebrow.role-tag { font-family: var(--body); font-size: .95rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--accent); }
+html[lang="ar"] .hero h1 { max-width: 26ch; line-height: 1.35; }
+html[lang="ar"] .eyebrow.role-tag { font-size: 1rem; }
 .lede { max-width: 62ch; margin-top: 1.25rem; color: var(--muted); font-size: 1.08rem; }
 .where { margin-top: .9rem; font-size: .92rem; color: var(--muted); }
 .cta-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
@@ -318,10 +320,10 @@ html[lang="ar"] .reach .v { text-align: right; }
 
 <main class="wrap">
   <div class="hero">
-    <p class="eyebrow" data-i18n="eyebrow">E-commerce Specialist · Performance Marketing &amp; Conversion Tracking</p>
-    <h1 data-i18n="h1">I grow online stores: the catalog, the ads, and the tracking that proves what worked.</h1>
-    <p class="lede" data-i18n="lede">A year and a half managing Salla and WooCommerce stores for agency clients, plus paid campaigns on Google Ads, Meta and Snapchat. I use GA4, Microsoft Clarity and Search Console to find where shoppers get stuck, then fix it.</p>
-    <p class="where" data-i18n="where">Saudi Arabia · Open to remote or on-site roles</p>
+    <p class="eyebrow role-tag" data-i18n="eyebrow">Performance Marketing · Conversion Tracking · Salla &amp; WooCommerce</p>
+    <h1 data-i18n="h1">E-commerce Specialist who runs paid campaigns and fixes tracking, so stores grow with measurable results.</h1>
+    <p class="lede" data-i18n="lede">Managed Salla and WooCommerce stores, and tracked 317 purchases across Google Ads, Meta and Snapchat campaigns.</p>
+    <p class="where" data-i18n="where">Saudi Arabia · 1.5 years in store management · Open to remote or on-site roles</p>
     <div class="cta-row">
       <button class="btn primary" type="button" data-scroll="work" data-i18n="cta1">See the Tarahib case study</button>
       <button class="btn" type="button" data-scroll="contact" data-i18n="cta2">Get in touch</button>
@@ -667,10 +669,10 @@ html[lang="ar"] .reach .v { text-align: right; }
   var AR = {
     brand: "محمد صدام ابوشعر", foot: "© 2026 محمد صدام ابوشعر",
     nav_work: "الأعمال", nav_stores: "المتاجر", nav_skills: "المهارات", nav_exp: "الخبرة", nav_contact: "التواصل",
-    eyebrow: "أخصائي تجارة إلكترونية | تسويق بالأداء وتتبع التحويلات",
-    h1: "أُنمّي المتاجر الإلكترونية بإدارة الكتالوج وتشغيل الإعلانات وتتبّعٍ دقيق يُثبت ما نجح.",
-    lede: "أملك خبرة سنة ونصف في إدارة متاجر سلة وWooCommerce لصالح عملاء وكالة، إضافةً إلى إدارة حملات إعلانية على Google Ads وMeta وSnapchat. أعتمد على GA4 وMicrosoft Clarity وSearch Console لرصد مواضع تعثّر المتسوّقين ومعالجتها.",
-    where: "المملكة العربية السعودية | متاح للعمل عن بُعد أو حضوريًا",
+    eyebrow: "التسويق بالأداء | تتبع التحويلات | سلة وWooCommerce",
+    h1: "أخصائي تجارة إلكترونية أدير الحملات الإعلانية وأضبط تتبع التحويلات، لتنمو المتاجر بنتائج قابلة للقياس.",
+    lede: "أدرتُ متاجر على سلة وWooCommerce، وتتبّعتُ 317 عملية شراء عبر حملات Google Ads وMeta وSnapchat.",
+    where: "المملكة العربية السعودية | سنة ونصف في إدارة المتاجر | متاح للعمل عن بُعد أو حضوريًا",
     cta1: "استعرض دراسة حالة تراحيب", cta2: "تواصل معي",
     s1n: "‎51–113%‎", s1l: "نسبة تحسّن العائد على الإنفاق الإعلاني (ROAS) في Meta وSnapchat بعد تضييق الميزانيات وتوسيعها",
     s2n: "+9 آلاف ر.س", s2l: "إنفاق إعلاني أُدير عبر Google وMeta وSnapchat",
